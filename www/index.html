@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Urbano</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="cleartype" content="on">   
+    <link rel="stylesheet" href="package/lungo/lungo.css">
+    <link rel="stylesheet" href="package/lungo/lungo.icon.css">
+    <link rel="stylesheet" href="css/app.css">    
+    <link rel="stylesheet" href="css/animate.min.css">    
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script type="text/javascript">
+            (function() {
+                var link_element = document.createElement("link"),
+                    s = document.getElementsByTagName("script")[0];
+                if (window.location.protocol !== "http:" && window.location.protocol !== "https:") {
+                    link_element.href = "http:";
+                }
+                link_element.href += "//fonts.googleapis.com/css?family=Roboto:400,100italic,100,300italic,300,400italic,500italic,500,700italic,700,900italic,900";
+                link_element.rel = "stylesheet";
+                link_element.type = "text/css";
+                s.parentNode.insertBefore(link_element, s);
+            })();
+        </script>
+</head>
+<body>
+    <div id="cuadro-superios" class="cuadroNegro"></div>
+    <section id="main" data-transition="slide" class="drag">
+        <header>           
+            <img src="img/logo.png" class="title centered" />
+            <nav class="on-right">
+	             <a href="#" data-view-aside="features" data-icon="menu"></a>
+	         </nav>
+        </header>
+        <article id="configuracion-clientes" class="scroll">
+	    	<div class="empty">
+	    		<div class="contenedor-datos" >
+	    			<div class="titular-notificaciones">Notificaciones</div>	    				    		
+	    		</div> 
+	    		<span class="espacio-titular">Notificaciones</span>
+	    		<ul id="opcion-seccion-listado">	    			
+	        		<li ref="kfc" class="opcion-seccion-elegir">
+	        			<span class="icono kfc-buenisimo"></span>
+	        			<span class="nombre-seccion-lista">KFC Buenisimo <br> Comparte con tus amigos.</span>
+						<span class="opcion-seccion-lista opcion-kfc"></span>
+					</li>	
+					<li ref="banco_pichincha" class="opcion-seccion-elegir">
+						<span class="icono banco-pichincha"></span>
+						<span class="nombre-seccion-lista">Banco Pichincha <br> Ahorra tiempo con nuestras aplicaciones.</span>
+						<span class="opcion-seccion-lista opcion-banco_pichincha"></span>
+					</li>
+					<li ref="marathon" class="opcion-seccion-elegir">
+						<span class="icono marathon-sport"></span>
+						<span class="nombre-seccion-lista">Marathon Sport <br> Descubre lo nuevo de Marathon</span>
+						<span class="opcion-seccion-lista opcion-marathon"></span>
+					</li>
+					<li ref="juan_valdez" class="opcion-seccion-elegir">
+						<span class="icono juan-valdez-cafè"></span>
+						<span class="nombre-seccion-lista">Juan Valdez Cafè <br> Aprovecha nuestras promociones.</span>
+						<span class="opcion-seccion-lista opcion-juan_valdez"></span>
+					</li>
+					<li ref="movistar" class="opcion-seccion-elegir">
+						<span class="icono movistar"></span>
+						<span class="nombre-seccion-lista">Movistar <br> Entérate de nuestras promociones.</span>
+						<span class="opcion-seccion-lista opcion-movistar"></span>
+					</li>	
+					<li ref="vespa" class="opcion-seccion-elegir">
+						<span class="icono vespa"></span>
+						<span class="nombre-seccion-lista">Vespa Ecuador<br> Conoce a la nueva GTS 300 Súper.</span>
+						<span class="opcion-seccion-lista opcion-vespa"></span>
+					</li>	        				        			      			
+	    		</ul>
+	    		
+	        </div>	        
+	    </article>  
+        <footer class="pie-pagina">
+				<nav class="menu-footer">					
+					<div class='btn btn-configuracion-finalizada' data-view-section="configuracion-realizada" >
+				        		  <a href="#" class="" >
+				        		  Continuar <span class="icon chevron-right"></span></a>							
+				    </div>
+				</nav>
+			</footer>
+    </section> 
+    
+    <div id="modal-compartir">
+	        <div class="sombra"></div>
+	        	<div class="cuadro-modal cuadro-share list animated">
+	        		<span class="btn-cerrar-modal"></span>
+	        		<span class="texto-titular-modal texto-titular-modal2">
+	    				Compártela con tus amigos
+	    			</span>
+	        		<div id="containerShare" class="bottomContent"> 
+		        		<div id="contentShare"> 
+	                    	<img src="img/tw.png" onclick="share('Twitter')" class="buttonShare " />
+	                		<img src="img/fb.png" onclick="share('Facebook')" class="buttonShare " />
+	                	</div>         		
+                	</div>
+	        	</div>
+	  </div>
+    
+	<script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/PushwooshAndroid.js"></script>
+        <script type="text/javascript" src="js/PushwooshiOS.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/social.js"></script>
+	    
+    <script src="components/quojs/quo.js"></script>
+    <script src="package/lungo/lungo.js"></script>
+    <script>
+    var ismobile=(/Mobile/.test(navigator.userAgent))?1:0;
+        
+    if(navigator.platform == 'iPad' )
+    	ismobile = 0;
+        
+    var tablet=false;        
+     
+    	(function() {
+            var link_element = document.createElement("link"),
+                s = document.getElementsByTagName("script")[0];            
+                link_element.href = "css/mobile.css";            
+            link_element.rel = "stylesheet";
+            link_element.type = "text/css";
+            s.parentNode.insertBefore(link_element, s);
+        })();
+    	
+    	Lungo.init({    		
+            name: 'urbano-app',
+            version: '1.2',
+            resources: [
+                'static/section_mobile/menu-configuracion.html',                                                               
+                'static/section_mobile/lista-notificaciones.html',
+                'static/section_mobile/configuracion-realizada.html',
+                'static/section_mobile/section-compartir.html',
+                'static/section_mobile/section-about.html'        
+                ],
+            history: false
+        });
+	
+    </script>
+    <script src="static/javascripts/app.js"></script>
+    <script src="js/data_app.js"></script>
+    <script src="js/app.js"></script>
+    <script type="text/javascript">
+	 $(document).ready(function() {	
+    		getLocalStorage();
+    	});
+      app.initialize();
+   </script>
+</body>
+</html>

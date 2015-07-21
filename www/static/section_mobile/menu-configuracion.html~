@@ -1,0 +1,12 @@
+<aside id="features" data-transition="left" class="box">
+    <header >  
+		<img src="img/logo_menu.png" class="title centered" />     
+    </header>
+    <article class="list scroll active">
+        <ul class="opciones-menu-app">
+            <li data-view-section="main">Mis Notificaciones </li>
+            <li data-view-section="section-compartir">Compartir</li>
+            <li data-view-section="section-about">Acerca de</li>
+        </ul>
+    </article>
+</aside>

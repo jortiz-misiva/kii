@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"           
+        xmlns:android   = "http://schemas.android.com/apk/res/android"
+        id        = "com.misiva.kiiconnect"
+        version   = "1.0.0">
+
+    <name>KiiConnect</name>
+    <description> Aplicacion KitConnect para que te mantengas informado de las ultimas promociones</description>
+    <author href="http://www.misiva.com.ec" email="info@misiva.com.ec">Misiva</author>
+
+    <!-- Customize your app and platform with the preference element. -->
+    <preference name="phonegap-version"   value="3.6.3" />   <!-- all: current version of PhoneGap -->
+    <preference name="orientation"        value="portrait" /><!-- all: default means both landscape and portrait are enabled -->
+    <preference name="target-device"      value="handset" /> <!-- all: possible values handset, tablet, or universal -->    
+    <preference name="fullscreen"         value="false" />   <!-- all: hides the status bar at the top of the screen -->
+    <preference name="webviewbounce"      value="true" />    <!-- ios: control whether the screen 'bounces' when scrolled beyond the top -->
+    <preference name="prerendered-icon" value="true" />
+    <preference name="android-minSdkVersion" value="7" />    
+    <!-- ios: if icon is prerendered, iOS will not apply it's gloss to the app's icon on the user's home screen -->
+    <preference name="prerendered-icon"           value="true" />  
+    <!-- ios: external links should open in the default browser, 'true' would use the webview the app lives in -->
+    <preference name="stay-in-webview"            value="false" /> 
+    <!-- ios: black-translucent will appear black because the PhoneGap webview doesn't go beneath the status bar -->  
+    <preference name="ios-statusbarstyle"         value="black-translucent" />     
+    <!-- ios: controls whether data types (such as phone no. and dates) are automatically turned into links by the system -->
+    <preference name="detect-data-types"          value="true" />           
+    <!-- ios: if set to true, app will terminate when home button is pressed -->
+    <preference name="exit-on-suspend"            value="false" />
+    <!-- ios: if set to false, the spinner won't appear on the splash screen during app loading -->
+    <preference name="show-splash-screen-spinner" value="true" />           
+    <!-- ios: if set to false, the splash screen must be hidden using a JavaScript API -->
+    <preference name="auto-hide-splash-screen"    value="true" />           
+    <!-- blackberry: prevents a mouse-icon/cursor from being displayed on the app -->
+    <preference name="disable-cursor"             value="false" />              
+    <!-- android: app install location. 'auto' will choose. 'internalOnly' is device memory. 'preferExternal' is SDCard. -->
+    <preference name="android-installLocation"    value="auto" />           
+    <!-- Plugins -->
+    <!-- Core plugins -->    
+    <gap:plugin name="org.apache.cordova.console" />    
+    <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.device-motion" />
+    <gap:plugin name="org.apache.cordova.device-orientation" />
+    <gap:plugin name="org.apache.cordova.dialogs" />
+    <gap:plugin name="org.apache.cordova.file" />
+    <gap:plugin name="org.apache.cordova.file-transfer" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" />    
+    <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="org.apache.cordova.splashscreen" />
+    <gap:plugin name="org.apache.cordova.vibration" />
+    <gap:plugin name="nl.x-services.plugins.socialsharing" version="4.3.8" />    
+
+    <!-- Pushwoosh plugin -->    	
+   <gap:plugin name="pushwoosh-cordova-plugin" source="npm" />
+      
+    <gap:config-file platform="ios" parent="NSLocationAlwaysUsageDescription" overwrite="true"> </gap:config-file> 
+    <gap:config-file platform="ios" parent="NSLocationWhenInUseUsageDescription" overwrite="true"> </gap:config-file>
+            
+    <!-- Define app icon for each platform. -->
+    <icon src="icono.png" />
+           
+    <icon src="res/icon/ios/180x180.png" gap:platform="ios" width="180" height="180" />        
+    <icon src="res/icon/ios/180x180.png" gap:platform="ios" width="60" height="60" />
+    <icon src="res/icon/ios/120x120.png" gap:platform="ios" width="120" height="120" />        
+    <icon src="res/icon/ios/76x76.png" gap:platform="ios" width="76" height="76" />
+    <icon src="res/icon/ios/152x152.png" gap:platform="ios" width="152" height="152" />        
+    <icon src="res/icon/ios/40x40.png" gap:platform="ios" width="40" height="40" />
+    <icon src="res/icon/ios/80x80.png" gap:platform="ios" width="80" height="80" />        
+    <icon src="res/icon/ios/57x57.png" gap:platform="ios" width="57" height="57" />
+    <icon src="res/icon/ios/114x114.png" gap:platform="ios" width="114" height="114" />
+    <icon src="res/icon/ios/72x72.png" gap:platform="ios" width="72" height="72" />
+    <icon src="res/icon/ios/144x144.png" gap:platform="ios" width="144" height="144" />
+    <icon src="res/icon/ios/29x29.png" gap:platform="ios" width="29" height="29" />
+    <icon src="res/icon/ios/58x58.png" gap:platform="ios" width="58" height="58" />
+    <icon src="res/icon/ios/50x50.png" gap:platform="ios" width="50" height="50" />
+    <icon src="res/icon/ios/100x100.png" gap:platform="ios" width="100" height="100" />
+            
+    <icon src="res/icon/android/icono_36.png" gap:platform="android" gap:density="ldpi" gap:qualifier="ldpi" />
+    <icon src="res/icon/android/icono_48.png" gap:platform="android" gap:density="mdpi" gap:qualifier="mdpi" />
+    <icon src="res/icon/android/icono_72.png" gap:platform="android" gap:density="hdpi" gap:qualifier="hdpi"/>
+    <icon src="res/icon/android/icono_96.png" gap:platform="android" gap:density="xhdpi" gap:qualifier="xhdpi" />   
+    
+    <!-- Define app splash screen for each platform. -->   
+    <gap:splash src="res/screen/android/screen-ldpi-portrait.png"  gap:platform="android" gap:density="ldpi" gap:qualifier="port-ldpi"   />
+    <gap:splash src="res/screen/android/screen-mdpi-portrait.png"  gap:platform="android" gap:density="mdpi" gap:qualifier="port-mdpi"  />
+    <gap:splash src="res/screen/android/screen-hdpi-portrait.png"  gap:platform="android" gap:density="hdpi" gap:qualifier="port-hdpi"  />
+    <gap:splash src="res/screen/android/screen-xhdpi-portrait.png" gap:platform="android" gap:density="xhdpi" gap:qualifier="port-xhdpi" />   
+    
+    <gap:splash src="res/screen/android/screen-xhdpi-landscape.png" gap:platform="android" gap:density="xhdpi" gap:qualifier="land-xhdpi"  />
+    <gap:splash src="res/screen/android/screen-hdpi-landscape.png"  gap:platform="android" gap:density="hdpi" gap:qualifier="land-hdpi" />
+    <gap:splash src="res/screen/android/screen-mdpi-landscape.png"  gap:platform="android" gap:density="mdpi" gap:qualifier="land-mdpi"  />
+    <gap:splash src="res/screen/android/screen-ldpi-landscape.png"  gap:platform="android" gap:density="ldpi" gap:qualifier="land-ldpi"  />            
+    <!-- images are determined by width and height. The following are supported -->
+    <gap:splash src="res/screen/ios/320x480.png" gap:platform="ios" width="320" height="480"/>
+    <gap:splash src="res/screen/ios/640x960.png" gap:platform="ios" width="640" height="960"/>
+    <gap:splash src="res/screen/ios/768x1024.png" gap:platform="ios" width="768" height="1024"/>
+    <gap:splash src="res/screen/ios/1536x2048.png" gap:platform="ios" width="1536" height="2048"/>
+    <gap:splash src="res/screen/ios/1024x768.png" gap:platform="ios" width="1024" height="768"/>
+    <gap:splash src="res/screen/ios/2048x1536.png" gap:platform="ios" width="2048" height="1536"/>
+    <gap:splash src="res/screen/ios/640x1136.png" gap:platform="ios"  width="640" height="1136"/>
+    <gap:splash src="res/screen/ios/1136x640.png" gap:platform="ios" width="1136" height="640" />
+    <gap:splash src="res/screen/ios/750x1334.png" gap:platform="ios" width="750" height="1334"/>
+    <gap:splash src="res/screen/ios/1242x2208.png" gap:platform="ios" width="1242" height="2208"/>
+    <gap:splash src="res/screen/ios/2208x1242.png" gap:platform="ios" width="2208" height="1242"/>
+       
+    <access origin="*" />
+    <access origin="*.pushwoosh.com"/> <!-- allow pushwoosh service -->
+
+</widget>
+
